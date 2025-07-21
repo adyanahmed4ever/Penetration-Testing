@@ -1,0 +1,103 @@
+📖 Description
+The Penetration Testing Toolkit is a modular, Python-based application designed for ethical hacking and cybersecurity testing. It provides essential tools for performing penetration tests such as TCP Port Scanning and Brute-Force Attacks on HTTP login forms. The toolkit is fully modular, making it easy to add new features like subdomain scanning, directory brute-forcing, or vulnerability testing. It’s built using Python's standard libraries along with requests for HTTP operations, and is suitable for students, ethical hackers, and security professionals.
+
+🧰 Features
+✅ TCP Port Scanner: Scans a target IP or domain for open ports (default: ports 1–1024).
+
+✅ HTTP Brute-Force Login Tool: Attempts to brute-force login pages using common passwords.
+
+✅ Modular code design using folders and importable modules.
+
+✅ Easy to use in IDLE (Python GUI) or from terminal.
+
+✅ Easily extensible with new modules.
+
+🏗️ Directory Structure
+penetration_toolkit/
+├── main.py
+├── modules/
+│   ├── port_scanner.py
+│   └── brute_forcer.py
+├── wordlists/
+│   └── common_passwords.txt
+└── README.md (this documentation)
+🚀 How to Run (IDLE or Terminal)
+🧑‍💻 Prerequisites
+Python 3.12 (64-bit) or later installed.
+
+requests library installed:
+Run in terminal:
+pip install requests
+▶️ Running in IDLE
+Open main.py in IDLE.
+
+Press F5 to run.
+
+Select module (1 for port scanner, 2 for brute forcer).
+
+Follow the prompts.
+
+⚙️ Toolkit Modules
+1. 🔍 Port Scanner (modules/port_scanner.py)
+Scans ports 1–1024 on a target host.
+
+Uses socket to check if ports are open.
+
+Fast and lightweight.
+
+Usage:
+
+python
+scan_ports("example.com")
+2. 🔐 HTTP Brute Forcer (modules/brute_forcer.py)
+Sends POST requests to a login URL.
+
+Iterates over a password wordlist.
+
+Stops and prints password on success.
+
+Usage:
+
+python
+http_brute_force("http://example.com/login", "admin", "wordlists/common_passwords.txt")
+📂 Wordlist Format (wordlists/common_passwords.txt)
+Plain-text file with one password per line:
+
+admin
+password
+123456
+letmein
+root
+toor
+💡 Future Extensions
+You can extend this toolkit by adding:
+
+🔸 Subdomain scanner
+
+🔸 Directory brute-forcer (dirb)
+
+🔸 SQLi/XSS vulnerability tester
+
+🔸 Banner grabber
+
+🔸 DNS zone transfer tester
+
+🔸 GUI using Tkinter
+
+To add a new module:
+
+Create modules/new_module.py
+
+Add a function and call it in main.py
+
+⚠️ Legal and Ethical Notice
+This toolkit is intended for educational purposes and authorized penetration testing only.
+Do NOT use this tool against websites, networks, or systems that you do not own or have explicit permission to test.
+Misuse may be illegal and is strictly discouraged.
+
+👨‍💻 Author
+Developed by: MOHAMMED ZUBAIR UDDIN ZAMEER
+
+Language: Python 3.12
+
+IDE: IDLE (Python GUI)
